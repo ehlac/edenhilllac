@@ -80,43 +80,24 @@ landscapePhotos.forEach((photo) => carouselSlides.push({ photos: [photo], layout
         <article><span>02</span><strong>Personal bests</strong><p>Progress measured against yourself—not anyone else.</p></article>
         <article><span>03</span><strong>Community</strong><p>Families, coaches and volunteers all on the same team.</p></article>
       </div>
-    </section>
-
-    <section class="join section" id="join">
-      <div class="join-copy">
-        <div class="section-label light">02 / Join us</div>
-        <p class="eyebrow coral"><span></span> Ready when you are</p>
-        <h2>Your next PB<br />starts <em>here.</em></h2>
-        <p>Registrations for each summer season are coordinated through Bayswater Little Athletics Centre. Kidsport vouchers are accepted—select Bayswater Little Athletics Centre when applying.</p>
-        <div class="join-actions"><a class="button button-coral" href="https://www.bayswaterlac.com.au/eden-hill-lac.html" target="_blank" rel="noreferrer">Registration details <span>↗</span></a><a href={facebook} target="_blank" rel="noreferrer">Ask us on Facebook →</a></div>
+      <div class="club-map">
+        <div class="map-copy">
+          <p class="eyebrow"><span></span> Our home ground</p>
+          <h3>Jubilee Reserve</h3>
+          <address>Stan Moses Pavilion<br />Robinson Road<br />Eden Hill WA 6054</address>
+          <a class="button button-light" href={maps} target="_blank" rel="noreferrer">Get directions <span>↗</span></a>
+        </div>
+        <iframe
+          title="Map showing Jubilee Reserve in Eden Hill"
+          src="https://www.google.com/maps?q=Jubilee+Reserve%2C+Robinson+Road%2C+Eden+Hill+WA+6054&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
-      <div class="join-card">
-        <img src="/eden-hill-mark.jpg" alt="Eden Hill LAC hand-drawn bird emblem" />
-        <small>QUICK DETAILS</small>
-        <dl><div><dt>Ages</dt><dd>5–17 years</dd></div><div><dt>Club colours</dt><dd>Black + white</dd></div><div><dt>2025/26 fee</dt><dd>$230 / athlete</dd></div><div><dt>Kidsport</dt><dd>Accepted</dd></div></dl>
-        <p>Fees and season dates can change. Confirm current details before registering.</p>
-      </div>
-    </section>
-
-    <section class="training section" id="training">
-      <div class="section-label light">03 / Training</div>
-      <div class="training-title"><p class="eyebrow coral"><span></span> Weekly sessions</p><h2>Meet you<br />at the <em>oval.</em></h2></div>
-      <div class="training-details">
-        <article>
-          <span class="detail-no">01</span><div><small>WHEN</small><h3>Mondays + Wednesdays</h3><p>4:45pm – 6:00pm during the summer athletics season.</p></div>
-        </article>
-        <article>
-          <span class="detail-no">02</span><div><small>WHERE</small><h3>Jubilee Reserve</h3><p>Stan Moses Pavilion, Robinson Road, Eden Hill.</p><a href={maps} target="_blank" rel="noreferrer">Open in maps ↗</a></div>
-        </article>
-        <article>
-          <span class="detail-no">03</span><div><small>WHAT TO BRING</small><h3>Water + a can-do attitude</h3><p>Wear comfortable sports clothes, runners and bring a water bottle.</p></div>
-        </article>
-      </div>
-      <div class="training-note"><strong>Heads up!</strong><p>Training times and weather cancellations can change. Check Facebook before you head down.</p><a href={facebook} target="_blank" rel="noreferrer">Check the latest →</a></div>
     </section>
 
     <section class="gallery-section section" id="gallery">
-      <div class="section-label light">04 / Club life</div>
+      <div class="section-label light">02 / Club life</div>
       <div class="gallery-heading">
         <p class="kicker">The moments between the finish lines.</p>
         <h2>Good days.<br />Great <em>memories.</em></h2>
@@ -149,6 +130,39 @@ landscapePhotos.forEach((photo) => carouselSlides.push({ photos: [photo], layout
       <div class="gallery-footer"><p>Want to see the latest action?</p><a href={facebook} target="_blank" rel="noreferrer">Follow the season on Facebook ↗</a></div>
     </section>
 
+    <section class="join section" id="join">
+      <div class="join-copy">
+        <div class="section-label light">03 / Join us</div>
+        <p class="eyebrow coral"><span></span> Ready when you are</p>
+        <h2>Your next PB<br />starts <em>here.</em></h2>
+        <p>Registrations for each summer season are coordinated through Bayswater Little Athletics Centre. Kidsport vouchers are accepted—select Bayswater Little Athletics Centre when applying.</p>
+        <div class="join-actions"><a class="button button-coral" href="https://www.bayswaterlac.com.au/eden-hill-lac.html" target="_blank" rel="noreferrer">Registration details <span>↗</span></a><a href={facebook} target="_blank" rel="noreferrer">Ask us on Facebook →</a></div>
+      </div>
+      <div class="join-card">
+        <img src="/eden-hill-mark.jpg" alt="Eden Hill LAC hand-drawn bird emblem" />
+        <small>QUICK DETAILS</small>
+        <dl><div><dt>Ages</dt><dd>5–17 years</dd></div><div><dt>Club colours</dt><dd>Black + white</dd></div><div><dt>2025/26 fee</dt><dd>$230 / athlete</dd></div><div><dt>Kidsport</dt><dd>Accepted</dd></div></dl>
+        <p>Fees and season dates can change. Confirm current details before registering.</p>
+      </div>
+    </section>
+
+    <section class="training section" id="training">
+      <div class="section-label light">04 / Training</div>
+      <div class="training-title"><p class="eyebrow coral"><span></span> Weekly sessions</p><h2>Meet you<br />at the <em>oval.</em></h2></div>
+      <div class="training-details">
+        <article>
+          <span class="detail-no">01</span><div><small>WHEN</small><h3>Mondays + Wednesdays</h3><p>4:45pm – 6:00pm during the summer athletics season.</p></div>
+        </article>
+        <article>
+          <span class="detail-no">02</span><div><small>WHERE</small><h3>Jubilee Reserve</h3><p>Stan Moses Pavilion, Robinson Road, Eden Hill.</p><a href={maps} target="_blank" rel="noreferrer">Open in maps ↗</a></div>
+        </article>
+        <article>
+          <span class="detail-no">03</span><div><small>WHAT TO BRING</small><h3>Water + a can-do attitude</h3><p>Wear comfortable sports clothes, runners and bring a water bottle.</p></div>
+        </article>
+      </div>
+      <div class="training-note"><strong>Heads up!</strong><p>Training times and weather cancellations can change. Check Facebook before you head down.</p><a href={facebook} target="_blank" rel="noreferrer">Check the latest →</a></div>
+    </section>
+
     <section class="events section">
       <div class="section-label">05 / What we do</div>
       <div class="events-intro"><p class="kicker">Try it all. Find your favourite.</p><h2>Every event is<br />a new <em>adventure.</em></h2></div>
@@ -173,6 +187,7 @@ landscapePhotos.forEach((photo) => carouselSlides.push({ photos: [photo], layout
   .site-header{height:92px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;background:#f2f2ee;position:relative;z-index:20;border-bottom:1px solid #bcbcb7}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;text-transform:uppercase;font-weight:900;letter-spacing:-.03em;line-height:.9}.brand img{width:52px;height:52px;border-radius:50%;mix-blend-mode:multiply}.brand strong{display:block;font-size:.72rem;letter-spacing:.04em;margin-top:5px}.site-header nav{display:flex;gap:34px}.site-header nav a,.header-cta{text-transform:uppercase;text-decoration:none;font-size:.72rem;font-weight:800;letter-spacing:.08em}.site-header nav a:hover{text-decoration:underline;text-underline-offset:7px}.header-cta{background:#111;color:white;padding:15px 18px}.header-cta span{color:#5a5a5a;margin-left:8px}
   .hero{min-height:calc(100vh - 92px);background:#111;color:#f5f5f2;position:relative;display:grid;grid-template-columns:1.08fr .92fr;overflow:hidden}.hero-track{position:absolute;inset:0;pointer-events:none}.hero-track i{position:absolute;left:-20%;width:75%;height:150%;top:-22%;border-right:1px solid #363636;border-radius:0 100% 100% 0;transform:rotate(-5deg)}.hero-track i:nth-child(2){left:-14%}.hero-track i:nth-child(3){left:-8%}.hero-track i:nth-child(4){left:-2%}.hero-copy{padding:9vw 4vw 9vw 7vw;z-index:2;align-self:center}.eyebrow,.kicker{font-size:.72rem;text-transform:uppercase;font-weight:800;letter-spacing:.15em}.eyebrow span{display:inline-block;width:28px;height:3px;background:#5a5a5a;vertical-align:middle;margin-right:10px}.hero h1,.section h2{font-family:Impact,'Arial Black',sans-serif;text-transform:uppercase;letter-spacing:-.055em;font-weight:900;line-height:.84;margin:.35em 0}.hero h1{font-size:clamp(4.5rem,9.7vw,10rem)}.hero h1 em,.section h2 em{color:#5a5a5a;font-style:normal}.intro{font-family:Georgia,serif;font-size:clamp(1.05rem,1.4vw,1.35rem);line-height:1.55;max-width:570px;color:#c9c7c1}.hero-actions{display:flex;align-items:center;gap:34px;margin-top:38px}.button{display:inline-flex;justify-content:space-between;gap:30px;padding:18px 22px;text-decoration:none;text-transform:uppercase;font-size:.75rem;letter-spacing:.08em;font-weight:900}.button-light{background:#f2f2ee;color:#111}.button:hover span{transform:translateX(4px)}.button span{transition:transform .2s}.text-link{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;font-weight:bold;text-decoration:none}.play{width:38px;height:38px;border:1px solid #555;border-radius:50%;display:inline-grid;place-items:center;margin-right:9px}.hero-art{position:relative;background:#050505;overflow:hidden;min-height:620px}.hero-art>img{width:100%;height:100%;position:absolute;inset:0;object-fit:contain;object-position:center center}.hero-art::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.2),transparent 28%);pointer-events:none}.hero-sticker{position:absolute;z-index:1;right:6%;bottom:10%;width:150px;height:150px;border-radius:50%;background:#f2f2ee;color:#111;display:grid;place-items:center;text-align:center;font-size:.72rem;font-weight:900;letter-spacing:.1em;transform:rotate(9deg);padding:25px}.hero-sticker strong{font:3rem/.8 Impact;color:#5a5a5a}.hero-sticker small{font-size:.55rem}.scroll-note{position:absolute;left:4vw;bottom:22px;z-index:3;font-size:.65rem;text-transform:uppercase;letter-spacing:.13em;color:#777}.scroll-note span{color:#5a5a5a;margin-left:8px}.ticker{background:#5a5a5a;white-space:nowrap;overflow:hidden;border-top:3px solid #111;border-bottom:3px solid #111}.ticker div{padding:16px 0;font-weight:900;font-size:1rem;letter-spacing:.09em;word-spacing:1.7rem;animation:slide 22s linear infinite}.ticker b{color:#ffffff}@keyframes slide{to{transform:translateX(-25%)}}
   .section{padding:110px 6vw}.section-label{font-size:.65rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;border-top:1px solid #9e9a92;padding-top:13px}.about{display:grid;grid-template-columns:.7fr 1.2fr 1fr;gap:4vw}.about-heading{padding-top:30px}.section h2{font-size:clamp(3.6rem,7vw,7.5rem)}.kicker{color:#777}.about-copy{padding-top:110px}.about-copy .lead{font-family:Georgia,serif;font-size:1.6rem;line-height:1.35}.about-copy p:not(.lead){line-height:1.7;color:#68655f}.arrow-link{display:flex;justify-content:space-between;border-bottom:2px solid #111;padding:17px 0;text-decoration:none;text-transform:uppercase;font-weight:900;font-size:.75rem;margin-top:25px}.values{grid-column:2 / 4;display:grid;grid-template-columns:repeat(3,1fr);margin-top:55px;border-top:1px solid #b8b8b2}.values article{padding:25px 28px 0 0;border-right:1px solid #b8b8b2;min-height:180px}.values article+article{padding-left:28px}.values span{font-size:.65rem;color:#5a5a5a;font-weight:bold}.values strong{display:block;font-size:1.35rem;margin:35px 0 8px}.values p{color:#777;line-height:1.5;font-size:.9rem}
+  .club-map{grid-column:1/-1;display:grid;grid-template-columns:minmax(260px,.65fr) 1.35fr;min-height:420px;margin-top:35px;background:#111;color:#f2f2ee;border:1px solid #111;overflow:hidden}.map-copy{padding:42px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end}.map-copy h3{font:clamp(2.5rem,4vw,4.8rem)/.9 Impact,'Arial Black',sans-serif;text-transform:uppercase;letter-spacing:-.045em;margin:18px 0}.map-copy address{font-style:normal;color:#aaa;line-height:1.65;margin-bottom:28px}.map-copy .button{margin-top:auto}.club-map iframe{width:100%;height:100%;min-height:420px;border:0}
   .training{background:#141414;color:#f2f2ee;display:grid;grid-template-columns:.55fr 1fr 1.15fr;gap:4vw}.light{border-color:#494949}.coral{color:#5a5a5a}.training-title{padding-top:35px}.training-details{padding-top:55px}.training-details article{display:grid;grid-template-columns:45px 1fr;gap:10px;border-top:1px solid #444;padding:23px 0}.detail-no{font-size:.65rem;color:#5a5a5a;font-weight:bold}.training-details small,.join-card small,footer small{font-size:.58rem;color:#858585;letter-spacing:.15em;font-weight:bold}.training-details h3{margin:5px 0 7px;font-size:1.3rem}.training-details p{margin:0;color:#9c9c9c;line-height:1.5}.training-details a{display:inline-block;margin-top:12px;color:#5a5a5a;font-size:.7rem;text-transform:uppercase;font-weight:bold}.training-note{grid-column:2/4;border:1px solid #444;padding:24px 30px;display:grid;grid-template-columns:.5fr 2fr .7fr;align-items:center}.training-note strong{text-transform:uppercase;color:#5a5a5a;font-size:.75rem}.training-note p{color:#aaa}.training-note a{text-align:right;text-transform:uppercase;font-size:.7rem;font-weight:bold}
   .events-intro{display:flex;justify-content:space-between;align-items:flex-end;margin:25px 0 55px}.events-intro .kicker{align-self:flex-start;margin-top:25px}.events-intro h2{text-align:right;margin:0}.event-grid{display:grid;grid-template-columns:repeat(3,1fr)}.event-card{min-height:500px;padding:30px;display:flex;flex-direction:column;border:1px solid #111}.event-card>span{font-size:.65rem;font-weight:bold}.event-card h3{font:5rem/.9 Impact;text-transform:uppercase;margin:auto 0 20px}.event-card p{max-width:300px;line-height:1.5}.event-icon{font-size:8rem;margin:auto;text-align:center}.orange{background:#5a5a5a}.dark{background:#171717;color:#f2f2ee;transform:translateY(25px)}.cream{background:#d8d8d3}.sprint{transform:skewX(-15deg)}
   .gallery-section{background:#111;color:#f2f2ee}.gallery-heading{display:grid;grid-template-columns:.7fr 1.35fr .65fr;gap:4vw;align-items:end;margin:35px 0 65px}.gallery-heading h2{margin:0}.gallery-heading>p:last-child{color:#aaa;line-height:1.65;font-family:Georgia,serif}.photo-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-flow:dense;gap:12px}.photo{position:relative;grid-column:span 3;height:34vw;max-height:520px;min-height:330px;margin:0;overflow:hidden;background:#292929}.photo.wide{grid-column:span 6}.photo.landscape{grid-column:span 6;height:25vw;min-height:280px}.photo.tall{grid-column:span 4;height:46vw;max-height:680px}.photo:nth-child(3),.photo:nth-child(8){grid-column:span 5}.photo:nth-child(5),.photo:nth-child(10){grid-column:span 3}.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}.photo:hover img{transform:scale(1.035)}.photo::after{content:"";position:absolute;inset:auto 0 0;height:38%;background:linear-gradient(transparent,rgba(0,0,0,.72));pointer-events:none}.photo figcaption{position:absolute;z-index:1;left:18px;right:18px;bottom:16px;display:flex;justify-content:space-between;align-items:end;text-transform:uppercase;font-size:.7rem;font-weight:900;letter-spacing:.08em}.photo figcaption span{font-size:.58rem;color:#c9c9c4}.gallery-footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #444;margin-top:45px;padding-top:22px;text-transform:uppercase;font-size:.7rem;font-weight:bold;letter-spacing:.06em}.gallery-footer a{padding-bottom:5px;border-bottom:1px solid #f2f2ee;text-decoration:none}
@@ -185,6 +200,8 @@ landscapePhotos.forEach((photo) => carouselSlides.push({ photos: [photo], layout
   @media(max-width:900px){.site-header nav{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:100px 7vw 80px}.hero-art{min-height:55vh}.scroll-note{display:none}.about,.training{grid-template-columns:1fr}.about-heading,.training-title{grid-column:auto}.about-copy{padding-top:0}.values,.training-note{grid-column:auto}.training-details{padding-top:0}.events-intro{display:block}.events-intro h2{text-align:left}.event-card{min-height:430px}.gallery-heading{grid-template-columns:1fr 1.5fr}.gallery-heading>p:last-child{grid-column:2}.photo,.photo:nth-child(5),.photo:nth-child(10){grid-column:span 4}.photo.wide,.photo.landscape,.photo:nth-child(3),.photo:nth-child(8){grid-column:span 8}.photo.tall{grid-column:span 4}.join{grid-template-columns:1fr}.join-card{max-width:480px}.footer-brand h2{font-size:4rem}}
   @media(max-width:650px){.site-header{height:74px}.brand img{width:42px;height:42px}.header-cta{padding:12px;font-size:.6rem}.hero{min-height:auto}.hero h1{font-size:20vw}.hero-actions{align-items:flex-start;flex-direction:column;gap:22px}.hero-art{min-height:440px}.hero-sticker{width:120px;height:120px}.ticker div{font-size:.75rem}.section{padding:80px 6vw}.about{gap:15px}.section h2{font-size:17vw}.values{grid-template-columns:1fr}.values article{border-right:0;border-bottom:1px solid #b8b8b2;padding:25px 0;min-height:0}.values article+article{padding-left:0}.values strong{margin-top:18px}.training-note{grid-template-columns:1fr}.training-note a{text-align:left}.event-grid{grid-template-columns:1fr}.event-card{min-height:390px}.dark{transform:none}.gallery-heading{display:block;margin-bottom:35px}.gallery-heading>p:last-child{margin-top:25px}.photo,.photo.wide,.photo.landscape,.photo.tall,.photo:nth-child(3),.photo:nth-child(5),.photo:nth-child(8),.photo:nth-child(10){grid-column:span 6;height:68vw;min-height:240px}.photo.wide,.photo.landscape{grid-column:span 12;height:62vw}.gallery-footer{align-items:flex-start;flex-direction:column;gap:14px}.join-actions{align-items:flex-start;flex-direction:column}.join-card{padding:28px;margin:0 6px}footer{grid-template-columns:1fr}.footer-brand h2{font-size:14vw}.copyright{grid-column:auto}}
   @media(max-width:650px){.carousel-slide{height:70vh;min-height:430px}.carousel-arrow{width:46px;height:46px;top:calc(50% - 32px)}.carousel-arrow.previous{left:10px}.carousel-arrow.next{right:10px}.carousel-slide figcaption{left:18px;right:18px;bottom:16px}.carousel-controls{grid-template-columns:64px 1fr}.carousel-controls .swipe-hint{display:none}}
+  @media(max-width:900px){.club-map{grid-template-columns:1fr}.club-map iframe{min-height:360px}.map-copy{min-height:310px}}
+  @media(max-width:650px){.club-map{margin-top:20px}.map-copy{padding:30px;min-height:300px}.club-map iframe{min-height:320px}}
 </style>
 
 <script>
