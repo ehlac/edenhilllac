@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const facebook = 'https://www.facebook.com/edenhilllac/';
+const maps = 'https://www.google.com/maps/search/?api=1&query=Jubilee+Reserve+Robinson+Road+Eden+Hill+WA';
+---
+
+<Layout title="Eden Hill Little Athletics Club" description="A welcoming Little Athletics club for kids aged 5–17 in Eden Hill, Western Australia.">
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Eden Hill Little Athletics Club home">
+      <img src="/eden-hill-mark.jpg" alt="" />
+      <span>Eden Hill <strong>Little Athletics</strong></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#about">Our club</a>
+      <a href="#training">Training</a>
+      <a href="#join">Join</a>
+    </nav>
+    <a class="header-cta" href={facebook} target="_blank" rel="noreferrer">Latest updates <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-track" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Eden Hill, Western Australia</p>
+        <h1>Run. Jump.<br /><em>Throw.</em> Grow.</h1>
+        <p class="intro">Big energy, new friendships and personal bests. A local athletics club where kids aged 5–17 can move, learn and belong.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#join">Join the club <span>→</span></a>
+          <a class="text-link" href="#training"><span class="play">↓</span> See how training works</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="/edenhilllac-poster.webp" alt="Eden Hill little athletes celebrating together on the oval" width="1800" height="1350" fetchpriority="high" />
+        <div class="hero-sticker">AGES<br /><strong>5–17</strong><small>EVERYONE<br />WELCOME</small></div>
+      </div>
+      <p class="scroll-note">Scroll to explore <span>↓</span></p>
+    </section>
+
+    <section class="ticker" aria-label="Club highlights">
+      <div>RUN <b>✦</b> JUMP <b>✦</b> THROW <b>✦</b> MAKE FRIENDS <b>✦</b> CHASE YOUR PB <b>✦</b> HAVE FUN <b>✦</b></div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="section-label">01 / Our club</div>
+      <div class="about-heading">
+        <p class="kicker">There’s a place for every pace.</p>
+        <h2>Little club.<br />Big <em>spirit.</em></h2>
+      </div>
+      <div class="about-copy">
+        <p class="lead">You don’t have to be the fastest. You just have to be ready to have a go.</p>
+        <p>Eden Hill Little Athletics Club is a friendly, volunteer-led community for young athletes of all abilities. We help kids build skills and confidence across track and field—with plenty of encouragement along the way.</p>
+        <a class="arrow-link" href={facebook} target="_blank" rel="noreferrer">Meet us on Facebook <span>↗</span></a>
+      </div>
+      <div class="values">
+        <article><span>01</span><strong>Fun first</strong><p>Positive sessions that keep kids moving and smiling.</p></article>
+        <article><span>02</span><strong>Personal bests</strong><p>Progress measured against yourself—not anyone else.</p></article>
+        <article><span>03</span><strong>Community</strong><p>Families, coaches and volunteers all on the same team.</p></article>
+      </div>
+    </section>
+
+    <section class="training section" id="training">
+      <div class="section-label light">02 / Training</div>
+      <div class="training-title"><p class="eyebrow coral"><span></span> Weekly sessions</p><h2>Meet you<br />at the <em>oval.</em></h2></div>
+      <div class="training-details">
+        <article>
+          <span class="detail-no">01</span><div><small>WHEN</small><h3>Mondays + Wednesdays</h3><p>4:45pm – 6:00pm during the summer athletics season.</p></div>
+        </article>
+        <article>
+          <span class="detail-no">02</span><div><small>WHERE</small><h3>Jubilee Reserve</h3><p>Stan Moses Pavilion, Robinson Road, Eden Hill.</p><a href={maps} target="_blank" rel="noreferrer">Open in maps ↗</a></div>
+        </article>
+        <article>
+          <span class="detail-no">03</span><div><small>WHAT TO BRING</small><h3>Water + a can-do attitude</h3><p>Wear comfortable sports clothes, runners and bring a water bottle.</p></div>
+        </article>
+      </div>
+      <div class="training-note"><strong>Heads up!</strong><p>Training times and weather cancellations can change. Check Facebook before you head down.</p><a href={facebook} target="_blank" rel="noreferrer">Check the latest →</a></div>
+    </section>
+
+    <section class="events section">
+      <div class="section-label">03 / What we do</div>
+      <div class="events-intro"><p class="kicker">Try it all. Find your favourite.</p><h2>Every event is<br />a new <em>adventure.</em></h2></div>
+      <div class="event-grid">
+        <article class="event-card orange"><span>01</span><div class="event-icon sprint">➜</div><h3>Run</h3><p>Sprints, hurdles and distance events build speed, stamina and grit.</p></article>
+        <article class="event-card dark"><span>02</span><div class="event-icon">↗</div><h3>Jump</h3><p>Leap into long jump and high jump while learning great technique.</p></article>
+        <article class="event-card cream"><span>03</span><div class="event-icon">◉</div><h3>Throw</h3><p>Discover shot put, discus and javelin in a safe, coached setting.</p></article>
+      </div>
+    </section>
+
+    <section class="join section" id="join">
+      <div class="join-copy">
+        <div class="section-label light">04 / Join us</div>
+        <p class="eyebrow coral"><span></span> Ready when you are</p>
+        <h2>Your next PB<br />starts <em>here.</em></h2>
+        <p>Registrations for each summer season are coordinated through Bayswater Little Athletics Centre. Kidsport vouchers are accepted—select Bayswater Little Athletics Centre when applying.</p>
+        <div class="join-actions"><a class="button button-coral" href="https://www.bayswaterlac.com.au/eden-hill-lac.html" target="_blank" rel="noreferrer">Registration details <span>↗</span></a><a href={facebook} target="_blank" rel="noreferrer">Ask us on Facebook →</a></div>
+      </div>
+      <div class="join-card">
+        <img src="/eden-hill-mark.jpg" alt="Eden Hill LAC hand-drawn bird emblem" />
+        <small>QUICK DETAILS</small>
+        <dl><div><dt>Ages</dt><dd>5–17 years</dd></div><div><dt>Club colours</dt><dd>Black + white</dd></div><div><dt>2025/26 fee</dt><dd>$230 / athlete</dd></div><div><dt>Kidsport</dt><dd>Accepted</dd></div></dl>
+        <p>Fees and season dates can change. Confirm current details before registering.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><img src="/eden-hill-mark.jpg" alt="" /><h2>Give it a go.</h2></div>
+    <div><small>TRAIN WITH US</small><p>Mon + Wed · 4:45–6:00pm<br />Jubilee Reserve, Eden Hill</p></div>
+    <div><small>KEEP IN TOUCH</small><a href={facebook} target="_blank" rel="noreferrer">Facebook ↗</a><a href="mailto:georgiehayes@live.com.au">Email us ↗</a></div>
+    <p class="copyright">© {new Date().getFullYear()} Eden Hill Little Athletics Club · Built for the next generation of little athletes.</p>
+  </footer>
+</Layout>
+
+<style>
+  :global(*){box-sizing:border-box} :global(html){scroll-behavior:smooth} :global(body){margin:0;background:#f2f2ee;color:#161616;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden} :global(a){color:inherit} :global(::selection){background:#5a5a5a;color:#fff}
+  .site-header{height:92px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;background:#f2f2ee;position:relative;z-index:20;border-bottom:1px solid #bcbcb7}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;text-transform:uppercase;font-weight:900;letter-spacing:-.03em;line-height:.9}.brand img{width:52px;height:52px;border-radius:50%;mix-blend-mode:multiply}.brand strong{display:block;font-size:.72rem;letter-spacing:.04em;margin-top:5px}.site-header nav{display:flex;gap:34px}.site-header nav a,.header-cta{text-transform:uppercase;text-decoration:none;font-size:.72rem;font-weight:800;letter-spacing:.08em}.site-header nav a:hover{text-decoration:underline;text-underline-offset:7px}.header-cta{background:#111;color:white;padding:15px 18px}.header-cta span{color:#5a5a5a;margin-left:8px}
+  .hero{min-height:calc(100vh - 92px);background:#111;color:#f5f5f2;position:relative;display:grid;grid-template-columns:1.08fr .92fr;overflow:hidden}.hero-track{position:absolute;inset:0;pointer-events:none}.hero-track i{position:absolute;left:-20%;width:75%;height:150%;top:-22%;border-right:1px solid #363636;border-radius:0 100% 100% 0;transform:rotate(-5deg)}.hero-track i:nth-child(2){left:-14%}.hero-track i:nth-child(3){left:-8%}.hero-track i:nth-child(4){left:-2%}.hero-copy{padding:9vw 4vw 9vw 7vw;z-index:2;align-self:center}.eyebrow,.kicker{font-size:.72rem;text-transform:uppercase;font-weight:800;letter-spacing:.15em}.eyebrow span{display:inline-block;width:28px;height:3px;background:#5a5a5a;vertical-align:middle;margin-right:10px}.hero h1,.section h2{font-family:Impact,'Arial Black',sans-serif;text-transform:uppercase;letter-spacing:-.055em;font-weight:900;line-height:.84;margin:.35em 0}.hero h1{font-size:clamp(4.5rem,9.7vw,10rem)}.hero h1 em,.section h2 em{color:#5a5a5a;font-style:normal}.intro{font-family:Georgia,serif;font-size:clamp(1.05rem,1.4vw,1.35rem);line-height:1.55;max-width:570px;color:#c9c7c1}.hero-actions{display:flex;align-items:center;gap:34px;margin-top:38px}.button{display:inline-flex;justify-content:space-between;gap:30px;padding:18px 22px;text-decoration:none;text-transform:uppercase;font-size:.75rem;letter-spacing:.08em;font-weight:900}.button-light{background:#f2f2ee;color:#111}.button:hover span{transform:translateX(4px)}.button span{transition:transform .2s}.text-link{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;font-weight:bold;text-decoration:none}.play{width:38px;height:38px;border:1px solid #555;border-radius:50%;display:inline-grid;place-items:center;margin-right:9px}.hero-art{position:relative;background:#050505;overflow:hidden;min-height:620px}.hero-art>img{width:100%;height:100%;position:absolute;inset:0;object-fit:contain;object-position:center center}.hero-art::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.2),transparent 28%);pointer-events:none}.hero-sticker{position:absolute;z-index:1;right:6%;bottom:10%;width:150px;height:150px;border-radius:50%;background:#f2f2ee;color:#111;display:grid;place-items:center;text-align:center;font-size:.72rem;font-weight:900;letter-spacing:.1em;transform:rotate(9deg);padding:25px}.hero-sticker strong{font:3rem/.8 Impact;color:#5a5a5a}.hero-sticker small{font-size:.55rem}.scroll-note{position:absolute;left:4vw;bottom:22px;z-index:3;font-size:.65rem;text-transform:uppercase;letter-spacing:.13em;color:#777}.scroll-note span{color:#5a5a5a;margin-left:8px}.ticker{background:#5a5a5a;white-space:nowrap;overflow:hidden;border-top:3px solid #111;border-bottom:3px solid #111}.ticker div{padding:16px 0;font-weight:900;font-size:1rem;letter-spacing:.09em;word-spacing:1.7rem;animation:slide 22s linear infinite}.ticker b{color:#ffffff}@keyframes slide{to{transform:translateX(-25%)}}
+  .section{padding:110px 6vw}.section-label{font-size:.65rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;border-top:1px solid #9e9a92;padding-top:13px}.about{display:grid;grid-template-columns:.7fr 1.2fr 1fr;gap:4vw}.about-heading{padding-top:30px}.section h2{font-size:clamp(3.6rem,7vw,7.5rem)}.kicker{color:#777}.about-copy{padding-top:110px}.about-copy .lead{font-family:Georgia,serif;font-size:1.6rem;line-height:1.35}.about-copy p:not(.lead){line-height:1.7;color:#68655f}.arrow-link{display:flex;justify-content:space-between;border-bottom:2px solid #111;padding:17px 0;text-decoration:none;text-transform:uppercase;font-weight:900;font-size:.75rem;margin-top:25px}.values{grid-column:2 / 4;display:grid;grid-template-columns:repeat(3,1fr);margin-top:55px;border-top:1px solid #b8b8b2}.values article{padding:25px 28px 0 0;border-right:1px solid #b8b8b2;min-height:180px}.values article+article{padding-left:28px}.values span{font-size:.65rem;color:#5a5a5a;font-weight:bold}.values strong{display:block;font-size:1.35rem;margin:35px 0 8px}.values p{color:#777;line-height:1.5;font-size:.9rem}
+  .training{background:#141414;color:#f2f2ee;display:grid;grid-template-columns:.55fr 1fr 1.15fr;gap:4vw}.light{border-color:#494949}.coral{color:#5a5a5a}.training-title{padding-top:35px}.training-details{padding-top:55px}.training-details article{display:grid;grid-template-columns:45px 1fr;gap:10px;border-top:1px solid #444;padding:23px 0}.detail-no{font-size:.65rem;color:#5a5a5a;font-weight:bold}.training-details small,.join-card small,footer small{font-size:.58rem;color:#858585;letter-spacing:.15em;font-weight:bold}.training-details h3{margin:5px 0 7px;font-size:1.3rem}.training-details p{margin:0;color:#9c9c9c;line-height:1.5}.training-details a{display:inline-block;margin-top:12px;color:#5a5a5a;font-size:.7rem;text-transform:uppercase;font-weight:bold}.training-note{grid-column:2/4;border:1px solid #444;padding:24px 30px;display:grid;grid-template-columns:.5fr 2fr .7fr;align-items:center}.training-note strong{text-transform:uppercase;color:#5a5a5a;font-size:.75rem}.training-note p{color:#aaa}.training-note a{text-align:right;text-transform:uppercase;font-size:.7rem;font-weight:bold}
+  .events-intro{display:flex;justify-content:space-between;align-items:flex-end;margin:25px 0 55px}.events-intro .kicker{align-self:flex-start;margin-top:25px}.events-intro h2{text-align:right;margin:0}.event-grid{display:grid;grid-template-columns:repeat(3,1fr)}.event-card{min-height:500px;padding:30px;display:flex;flex-direction:column;border:1px solid #111}.event-card>span{font-size:.65rem;font-weight:bold}.event-card h3{font:5rem/.9 Impact;text-transform:uppercase;margin:auto 0 20px}.event-card p{max-width:300px;line-height:1.5}.event-icon{font-size:8rem;margin:auto;text-align:center}.orange{background:#5a5a5a}.dark{background:#171717;color:#f2f2ee;transform:translateY(25px)}.cream{background:#d8d8d3}.sprint{transform:skewX(-15deg)}
+  .join{background:#171717;color:#f2f2ee;display:grid;grid-template-columns:1.3fr .7fr;gap:8vw}.join-copy>.eyebrow{margin-top:75px}.join-copy>p:not(.eyebrow){max-width:640px;color:#aaa;font-family:Georgia,serif;font-size:1.2rem;line-height:1.6}.join-actions{display:flex;align-items:center;gap:28px;margin-top:35px}.button-coral{background:#5a5a5a;color:#111}.join-actions>a:not(.button){text-transform:uppercase;font-size:.7rem;font-weight:bold}.join-card{background:#f0ece3;color:#111;padding:40px;transform:rotate(1.5deg);align-self:center;box-shadow:10px 10px 0 #5a5a5a}.join-card img{width:100px;height:100px;border-radius:50%;display:block;margin:-5px 0 30px;mix-blend-mode:multiply}.join-card dl{margin:25px 0}.join-card dl div{display:flex;justify-content:space-between;border-top:1px solid #aaa;padding:15px 0}.join-card dt{text-transform:uppercase;font-size:.65rem;font-weight:bold;letter-spacing:.08em}.join-card dd{margin:0;font-weight:bold}.join-card>p{font-size:.68rem;color:#777;line-height:1.5}
+  footer{background:#5a5a5a;padding:70px 6vw 28px;display:grid;grid-template-columns:1.5fr .7fr .7fr;gap:5vw}footer .footer-brand{display:flex;align-items:center;gap:25px}.footer-brand img{width:85px;height:85px;border-radius:50%;mix-blend-mode:multiply}.footer-brand h2{font:5vw/.9 Impact;text-transform:uppercase;margin:0}.footer-brand~div{padding-top:18px}footer p{line-height:1.5}footer a{display:block;margin:13px 0;text-transform:uppercase;font-weight:bold;font-size:.75rem}.copyright{grid-column:1/-1;border-top:1px solid rgba(0,0,0,.35);padding-top:20px;margin-top:50px;font-size:.65rem;text-transform:uppercase;letter-spacing:.05em}
+  .training .coral,.training .detail-no,.training-details a,.training-note strong,.join .coral{color:#d8d8d3}
+  .join .button-coral{background:#f2f2ee;color:#111}
+  @media(max-width:900px){.site-header nav{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:100px 7vw 80px}.hero-art{min-height:55vh}.scroll-note{display:none}.about,.training{grid-template-columns:1fr}.about-heading,.training-title{grid-column:auto}.about-copy{padding-top:0}.values,.training-note{grid-column:auto}.training-details{padding-top:0}.events-intro{display:block}.events-intro h2{text-align:left}.event-card{min-height:430px}.join{grid-template-columns:1fr}.join-card{max-width:480px}.footer-brand h2{font-size:4rem}}
+  @media(max-width:650px){.site-header{height:74px}.brand img{width:42px;height:42px}.header-cta{padding:12px;font-size:.6rem}.hero{min-height:auto}.hero h1{font-size:20vw}.hero-actions{align-items:flex-start;flex-direction:column;gap:22px}.hero-art{min-height:440px}.hero-sticker{width:120px;height:120px}.ticker div{font-size:.75rem}.section{padding:80px 6vw}.about{gap:15px}.section h2{font-size:17vw}.values{grid-template-columns:1fr}.values article{border-right:0;border-bottom:1px solid #b8b8b2;padding:25px 0;min-height:0}.values article+article{padding-left:0}.values strong{margin-top:18px}.training-note{grid-template-columns:1fr}.training-note a{text-align:left}.event-grid{grid-template-columns:1fr}.event-card{min-height:390px}.dark{transform:none}.join-actions{align-items:flex-start;flex-direction:column}.join-card{padding:28px;margin:0 6px}footer{grid-template-columns:1fr}.footer-brand h2{font-size:14vw}.copyright{grid-column:auto}}
+</style>
