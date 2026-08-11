@@ -109,18 +109,29 @@ const gallery = [
         <h2>Good days.<br />Great <em>memories.</em></h2>
         <p>Every medal, muddy shoe and massive smile tells a story. This is what Little Athletics looks like at Eden Hill.</p>
       </div>
-      <div class="photo-grid">
-        {gallery.map((photo, index) => (
-          <figure class={`photo ${photo.size}`}>
-            <img
-              src={`/images/gallery/${photo.src}`}
-              alt={photo.alt}
-              loading="lazy"
-              decoding="async"
-            />
-            <figcaption><span>{String(index + 1).padStart(2, '0')}</span>{photo.caption}</figcaption>
-          </figure>
-        ))}
+      <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Eden Hill Little Athletics photo gallery">
+        <div class="carousel-viewport" data-carousel-viewport tabindex="0">
+          {gallery.map((photo, index) => (
+            <figure class="carousel-slide" data-carousel-slide aria-roledescription="slide" aria-label={`${index + 1} of ${gallery.length}: ${photo.caption}`}>
+              <img
+                src={`/images/gallery/${photo.src}`}
+                alt={photo.alt}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                decoding="async"
+              />
+              <figcaption><span>{String(index + 1).padStart(2, '0')}</span>{photo.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+        <button class="carousel-arrow previous" type="button" data-carousel-previous aria-label="Previous photo">←</button>
+        <button class="carousel-arrow next" type="button" data-carousel-next aria-label="Next photo">→</button>
+        <div class="carousel-controls">
+          <p><strong data-carousel-current>01</strong> / {String(gallery.length).padStart(2, '0')}</p>
+          <div class="carousel-dots" aria-label="Choose a photo">
+            {gallery.map((photo, index) => <button type="button" data-carousel-dot={index} aria-label={`Go to photo ${index + 1}: ${photo.caption}`} aria-current={index === 0 ? 'true' : 'false'}></button>)}
+          </div>
+          <p class="swipe-hint">Swipe or use arrows</p>
+        </div>
       </div>
       <div class="gallery-footer"><p>Want to see the latest action?</p><a href={facebook} target="_blank" rel="noreferrer">Follow the season on Facebook ↗</a></div>
     </section>
@@ -158,6 +169,7 @@ const gallery = [
   .training{background:#141414;color:#f2f2ee;display:grid;grid-template-columns:.55fr 1fr 1.15fr;gap:4vw}.light{border-color:#494949}.coral{color:#5a5a5a}.training-title{padding-top:35px}.training-details{padding-top:55px}.training-details article{display:grid;grid-template-columns:45px 1fr;gap:10px;border-top:1px solid #444;padding:23px 0}.detail-no{font-size:.65rem;color:#5a5a5a;font-weight:bold}.training-details small,.join-card small,footer small{font-size:.58rem;color:#858585;letter-spacing:.15em;font-weight:bold}.training-details h3{margin:5px 0 7px;font-size:1.3rem}.training-details p{margin:0;color:#9c9c9c;line-height:1.5}.training-details a{display:inline-block;margin-top:12px;color:#5a5a5a;font-size:.7rem;text-transform:uppercase;font-weight:bold}.training-note{grid-column:2/4;border:1px solid #444;padding:24px 30px;display:grid;grid-template-columns:.5fr 2fr .7fr;align-items:center}.training-note strong{text-transform:uppercase;color:#5a5a5a;font-size:.75rem}.training-note p{color:#aaa}.training-note a{text-align:right;text-transform:uppercase;font-size:.7rem;font-weight:bold}
   .events-intro{display:flex;justify-content:space-between;align-items:flex-end;margin:25px 0 55px}.events-intro .kicker{align-self:flex-start;margin-top:25px}.events-intro h2{text-align:right;margin:0}.event-grid{display:grid;grid-template-columns:repeat(3,1fr)}.event-card{min-height:500px;padding:30px;display:flex;flex-direction:column;border:1px solid #111}.event-card>span{font-size:.65rem;font-weight:bold}.event-card h3{font:5rem/.9 Impact;text-transform:uppercase;margin:auto 0 20px}.event-card p{max-width:300px;line-height:1.5}.event-icon{font-size:8rem;margin:auto;text-align:center}.orange{background:#5a5a5a}.dark{background:#171717;color:#f2f2ee;transform:translateY(25px)}.cream{background:#d8d8d3}.sprint{transform:skewX(-15deg)}
   .gallery-section{background:#111;color:#f2f2ee}.gallery-heading{display:grid;grid-template-columns:.7fr 1.35fr .65fr;gap:4vw;align-items:end;margin:35px 0 65px}.gallery-heading h2{margin:0}.gallery-heading>p:last-child{color:#aaa;line-height:1.65;font-family:Georgia,serif}.photo-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-flow:dense;gap:12px}.photo{position:relative;grid-column:span 3;height:34vw;max-height:520px;min-height:330px;margin:0;overflow:hidden;background:#292929}.photo.wide{grid-column:span 6}.photo.landscape{grid-column:span 6;height:25vw;min-height:280px}.photo.tall{grid-column:span 4;height:46vw;max-height:680px}.photo:nth-child(3),.photo:nth-child(8){grid-column:span 5}.photo:nth-child(5),.photo:nth-child(10){grid-column:span 3}.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}.photo:hover img{transform:scale(1.035)}.photo::after{content:"";position:absolute;inset:auto 0 0;height:38%;background:linear-gradient(transparent,rgba(0,0,0,.72));pointer-events:none}.photo figcaption{position:absolute;z-index:1;left:18px;right:18px;bottom:16px;display:flex;justify-content:space-between;align-items:end;text-transform:uppercase;font-size:.7rem;font-weight:900;letter-spacing:.08em}.photo figcaption span{font-size:.58rem;color:#c9c9c4}.gallery-footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #444;margin-top:45px;padding-top:22px;text-transform:uppercase;font-size:.7rem;font-weight:bold;letter-spacing:.06em}.gallery-footer a{padding-bottom:5px;border-bottom:1px solid #f2f2ee;text-decoration:none}
+  .carousel{position:relative}.carousel-viewport{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;background:#050505;border:1px solid #363636;outline:none}.carousel-viewport::-webkit-scrollbar{display:none}.carousel-viewport:focus-visible{box-shadow:0 0 0 3px #f2f2ee}.carousel-slide{position:relative;flex:0 0 100%;height:min(72vh,760px);min-height:520px;margin:0;scroll-snap-align:start;scroll-snap-stop:always;display:grid;place-items:center;overflow:hidden}.carousel-slide img{display:block;width:100%;height:100%;object-fit:contain}.carousel-slide::after{content:"";position:absolute;inset:auto 0 0;height:28%;background:linear-gradient(transparent,rgba(0,0,0,.78));pointer-events:none}.carousel-slide figcaption{position:absolute;z-index:1;left:32px;right:32px;bottom:25px;display:flex;justify-content:space-between;align-items:end;text-transform:uppercase;font-size:.8rem;font-weight:900;letter-spacing:.1em}.carousel-slide figcaption span{font-size:.62rem;color:#c9c9c4}.carousel-arrow{position:absolute;z-index:2;top:calc(50% - 42px);width:58px;height:58px;border:0;border-radius:50%;background:#f2f2ee;color:#111;font-size:1.5rem;cursor:pointer;display:grid;place-items:center;transition:transform .2s,background .2s}.carousel-arrow:hover{transform:scale(1.08);background:#fff}.carousel-arrow:focus-visible{outline:3px solid #fff;outline-offset:3px}.carousel-arrow.previous{left:22px}.carousel-arrow.next{right:22px}.carousel-controls{display:grid;grid-template-columns:100px 1fr 160px;align-items:center;gap:24px;padding:22px 2px 0}.carousel-controls p{margin:0;text-transform:uppercase;font-size:.62rem;letter-spacing:.1em;color:#888}.carousel-controls strong{font-size:1.05rem;color:#f2f2ee}.carousel-dots{display:flex;justify-content:center;gap:8px}.carousel-dots button{width:8px;height:8px;border:0;border-radius:50%;padding:0;background:#555;cursor:pointer;transition:width .25s,background .25s}.carousel-dots button[aria-current="true"]{width:30px;border-radius:8px;background:#f2f2ee}.swipe-hint{text-align:right}.gallery-footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #444;margin-top:45px;padding-top:22px;text-transform:uppercase;font-size:.7rem;font-weight:bold;letter-spacing:.06em}.gallery-footer a{padding-bottom:5px;border-bottom:1px solid #f2f2ee;text-decoration:none}
   .join{background:#171717;color:#f2f2ee;display:grid;grid-template-columns:1.3fr .7fr;gap:8vw}.join-copy>.eyebrow{margin-top:75px}.join-copy>p:not(.eyebrow){max-width:640px;color:#aaa;font-family:Georgia,serif;font-size:1.2rem;line-height:1.6}.join-actions{display:flex;align-items:center;gap:28px;margin-top:35px}.button-coral{background:#5a5a5a;color:#111}.join-actions>a:not(.button){text-transform:uppercase;font-size:.7rem;font-weight:bold}.join-card{background:#f0ece3;color:#111;padding:40px;transform:rotate(1.5deg);align-self:center;box-shadow:10px 10px 0 #5a5a5a}.join-card img{width:100px;height:100px;border-radius:50%;display:block;margin:-5px 0 30px;mix-blend-mode:multiply}.join-card dl{margin:25px 0}.join-card dl div{display:flex;justify-content:space-between;border-top:1px solid #aaa;padding:15px 0}.join-card dt{text-transform:uppercase;font-size:.65rem;font-weight:bold;letter-spacing:.08em}.join-card dd{margin:0;font-weight:bold}.join-card>p{font-size:.68rem;color:#777;line-height:1.5}
   footer{background:#5a5a5a;padding:70px 6vw 28px;display:grid;grid-template-columns:1.5fr .7fr .7fr;gap:5vw}footer .footer-brand{display:flex;align-items:center;gap:25px}.footer-brand img{width:85px;height:85px;border-radius:50%;mix-blend-mode:multiply}.footer-brand h2{font:5vw/.9 Impact;text-transform:uppercase;margin:0}.footer-brand~div{padding-top:18px}footer p{line-height:1.5}footer a{display:block;margin:13px 0;text-transform:uppercase;font-weight:bold;font-size:.75rem}.copyright{grid-column:1/-1;border-top:1px solid rgba(0,0,0,.35);padding-top:20px;margin-top:50px;font-size:.65rem;text-transform:uppercase;letter-spacing:.05em}
   .training .coral,.training .detail-no,.training-details a,.training-note strong,.join .coral{color:#d8d8d3}
@@ -165,3 +177,39 @@ const gallery = [
   @media(max-width:900px){.site-header nav{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:100px 7vw 80px}.hero-art{min-height:55vh}.scroll-note{display:none}.about,.training{grid-template-columns:1fr}.about-heading,.training-title{grid-column:auto}.about-copy{padding-top:0}.values,.training-note{grid-column:auto}.training-details{padding-top:0}.events-intro{display:block}.events-intro h2{text-align:left}.event-card{min-height:430px}.gallery-heading{grid-template-columns:1fr 1.5fr}.gallery-heading>p:last-child{grid-column:2}.photo,.photo:nth-child(5),.photo:nth-child(10){grid-column:span 4}.photo.wide,.photo.landscape,.photo:nth-child(3),.photo:nth-child(8){grid-column:span 8}.photo.tall{grid-column:span 4}.join{grid-template-columns:1fr}.join-card{max-width:480px}.footer-brand h2{font-size:4rem}}
   @media(max-width:650px){.site-header{height:74px}.brand img{width:42px;height:42px}.header-cta{padding:12px;font-size:.6rem}.hero{min-height:auto}.hero h1{font-size:20vw}.hero-actions{align-items:flex-start;flex-direction:column;gap:22px}.hero-art{min-height:440px}.hero-sticker{width:120px;height:120px}.ticker div{font-size:.75rem}.section{padding:80px 6vw}.about{gap:15px}.section h2{font-size:17vw}.values{grid-template-columns:1fr}.values article{border-right:0;border-bottom:1px solid #b8b8b2;padding:25px 0;min-height:0}.values article+article{padding-left:0}.values strong{margin-top:18px}.training-note{grid-template-columns:1fr}.training-note a{text-align:left}.event-grid{grid-template-columns:1fr}.event-card{min-height:390px}.dark{transform:none}.gallery-heading{display:block;margin-bottom:35px}.gallery-heading>p:last-child{margin-top:25px}.photo,.photo.wide,.photo.landscape,.photo.tall,.photo:nth-child(3),.photo:nth-child(5),.photo:nth-child(8),.photo:nth-child(10){grid-column:span 6;height:68vw;min-height:240px}.photo.wide,.photo.landscape{grid-column:span 12;height:62vw}.gallery-footer{align-items:flex-start;flex-direction:column;gap:14px}.join-actions{align-items:flex-start;flex-direction:column}.join-card{padding:28px;margin:0 6px}footer{grid-template-columns:1fr}.footer-brand h2{font-size:14vw}.copyright{grid-column:auto}}
 </style>
+
+<script>
+  const carousel = document.querySelector('[data-carousel]');
+  if (carousel) {
+    const viewport = carousel.querySelector('[data-carousel-viewport]');
+    const slides = [...carousel.querySelectorAll('[data-carousel-slide]')];
+    const dots = [...carousel.querySelectorAll('[data-carousel-dot]')];
+    const current = carousel.querySelector('[data-carousel-current]');
+    let activeIndex = 0;
+
+    const showSlide = (index) => {
+      activeIndex = (index + slides.length) % slides.length;
+      slides[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    };
+
+    const updateControls = (index) => {
+      activeIndex = index;
+      if (current) current.textContent = String(index + 1).padStart(2, '0');
+      dots.forEach((dot, dotIndex) => dot.setAttribute('aria-current', dotIndex === index ? 'true' : 'false'));
+    };
+
+    carousel.querySelector('[data-carousel-previous]')?.addEventListener('click', () => showSlide(activeIndex - 1));
+    carousel.querySelector('[data-carousel-next]')?.addEventListener('click', () => showSlide(activeIndex + 1));
+    dots.forEach((dot, index) => dot.addEventListener('click', () => showSlide(index)));
+    viewport?.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') { event.preventDefault(); showSlide(activeIndex - 1); }
+      if (event.key === 'ArrowRight') { event.preventDefault(); showSlide(activeIndex + 1); }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) updateControls(slides.indexOf(visible.target));
+    }, { root: viewport, threshold: [0.6, 0.9] });
+    slides.forEach((slide) => observer.observe(slide));
+  }
+</script>
