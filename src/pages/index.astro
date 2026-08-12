@@ -4,6 +4,8 @@ import Layout from "../layouts/Layout.astro";
 const facebook = "https://www.facebook.com/edenhilllac/";
 const maps =
   "https://www.google.com/maps/search/?api=1&query=Jubilee+Reserve+Robinson+Road+Eden+Hill+WA";
+const norandaMaps =
+  "https://www.google.com/maps/search/?api=1&query=Noranda+Sporting+Complex+WA";
 type FaqItem = {
   question: string;
   answer: string;
@@ -152,6 +154,7 @@ landscapePhotos.forEach((photo) =>
     <nav aria-label="Main navigation">
       <a href="#about">Our club</a>
       <a href="#training">Training</a>
+      <a href="#meets">Saturday meets</a>
       <a href="#gallery">Gallery</a>
       <a href="#join">Join</a>
       <a href="#faq">FAQ</a>
@@ -332,9 +335,64 @@ landscapePhotos.forEach((photo) =>
       </div>
     </section>
 
+    <section class="meets section" id="meets">
+      <div class="section-label light">03 / Saturday Competition</div>
+      <div class="meets-title">
+        <p class="eyebrow coral"><span></span> Race Days</p>
+        <h2>Saturday<br />track <em>meets.</em></h2>
+      </div>
+      <div class="meets-details">
+        <article>
+          <span class="detail-no">01</span>
+          <div>
+            <small>WHEN</small>
+            <h3>Saturdays 8:00am – 12:00pm</h3>
+            <p>
+              Weekly track and field competition meets held throughout the
+              summer season.
+            </p>
+          </div>
+        </article>
+        <article>
+          <span class="detail-no">02</span>
+          <div>
+            <small>WHERE</small>
+            <h3>Noranda Sporting Complex</h3>
+            <p>
+              Hosted by Bayswater Little Athletics Centre for inter-club
+              competition.
+            </p>
+            <a href={norandaMaps} target="_blank" rel="noreferrer"
+              >Open in maps ↗</a
+            >
+          </div>
+        </article>
+        <article>
+          <span class="detail-no">03</span>
+          <div>
+            <small>PARENT ROSTER</small>
+            <h3>Parent Sign-Up Required</h3>
+            <p>
+              Little Athletics is a family activity! Parents must sign up for
+              volunteer roster duties (timing, officiating, measuring, and
+              marshalling) to help run each meet.
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="meets-note">
+        <strong>Parent Roster Sign-Up</strong>
+        <p>
+          Meets rely 100% on parent volunteers. Please make sure to sign up for
+          your roster slot prior to competition days.
+        </p>
+        <a href={facebook} target="_blank" rel="noreferrer">Check roster →</a>
+      </div>
+    </section>
+
     <section class="join section" id="join">
       <div class="join-copy">
-        <div class="section-label">03 / Join us</div>
+        <div class="section-label">04 / Join us</div>
         <p class="eyebrow coral"><span></span> Ready when you are</p>
         <h2>Your next PB<br />starts <em>here.</em></h2>
         <p>
@@ -361,7 +419,7 @@ landscapePhotos.forEach((photo) =>
         <small>QUICK DETAILS</small>
         <dl>
           <div><dt>Ages</dt><dd>5–17 years</dd></div><div>
-            <dt>Club colours</dt><dd>Black + white</dd>
+            <dt>Club uniform</dt><dd>Black shorts + club shirt</dd>
           </div><div><dt>2026/27 fee from</dt><dd>$240 / athlete</dd></div><div>
             <dt>Kidsport</dt><dd>Accepted</dd>
           </div>
@@ -374,7 +432,7 @@ landscapePhotos.forEach((photo) =>
     </section>
 
     <section class="gallery-section section" id="gallery">
-      <div class="section-label light">04 / Club life</div>
+      <div class="section-label light">05 / Club life</div>
       <div class="gallery-heading">
         <p class="kicker">The moments between the finish lines.</p>
         <h2>Good days.<br />Great <em>memories.</em></h2>
@@ -465,7 +523,7 @@ landscapePhotos.forEach((photo) =>
     </section>
 
     <section class="events section">
-      <div class="section-label">05 / What we do</div>
+      <div class="section-label">06 / What we do</div>
       <div class="events-intro">
         <p class="kicker">Try it all. Find your favourite.</p><h2>
           Every event is<br />a new <em>adventure.</em>
@@ -509,7 +567,7 @@ landscapePhotos.forEach((photo) =>
     </section>
 
     <section class="faq-section section" id="faq">
-      <div class="section-label light">06 / Need to know</div>
+      <div class="section-label light">07 / Need to know</div>
       <div class="faq-intro">
         <p class="kicker">Questions are always welcome.</p>
         <h2>Frequently<br /><em>asked.</em></h2>
@@ -1087,6 +1145,74 @@ landscapePhotos.forEach((photo) =>
     color: #aaa;
   }
   .training-note a {
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+  .meets {
+    background: #181818;
+    color: #f2f2ee;
+    display: grid;
+    grid-template-columns: 0.55fr 1fr 1.15fr;
+    gap: 4vw;
+    border-top: 1px solid #333;
+  }
+  .meets-title {
+    padding-top: 35px;
+  }
+  .meets-details {
+    padding-top: 55px;
+  }
+  .meets-details article {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 10px;
+    border-top: 1px solid #444;
+    padding: 23px 0;
+  }
+  .meets-details small {
+    font-size: 0.58rem;
+    color: #858585;
+    letter-spacing: 0.15em;
+    font-weight: bold;
+  }
+  .meets-details h3 {
+    margin: 5px 0 7px;
+    font-size: 1.3rem;
+  }
+  .meets-details p {
+    margin: 0;
+    color: #9c9c9c;
+    line-height: 1.5;
+  }
+  .meets-details a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #d8d8d3;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .meets-note {
+    grid-column: 2/4;
+    border: 1px solid #444;
+    padding: 24px 30px;
+    display: grid;
+    grid-template-columns: 0.7fr 1.8fr 0.7fr;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .meets-note strong {
+    text-transform: uppercase;
+    color: #d8d8d3;
+    font-size: 0.75rem;
+  }
+  .meets-note p {
+    color: #aaa;
+    margin: 0;
+  }
+  .meets-note a {
     text-align: right;
     text-transform: uppercase;
     font-size: 0.7rem;
@@ -1735,7 +1861,11 @@ landscapePhotos.forEach((photo) =>
   .training .coral,
   .training .detail-no,
   .training-details a,
-  .training-note strong {
+  .training-note strong,
+  .meets .coral,
+  .meets .detail-no,
+  .meets-details a,
+  .meets-note strong {
     color: #d8d8d3;
   }
   @media (max-width: 900px) {
@@ -1755,21 +1885,25 @@ landscapePhotos.forEach((photo) =>
       display: none;
     }
     .about,
-    .training {
+    .training,
+    .meets {
       grid-template-columns: 1fr;
     }
     .about-heading,
-    .training-title {
+    .training-title,
+    .meets-title {
       grid-column: auto;
     }
     .about-copy {
       padding-top: 0;
     }
     .values,
-    .training-note {
+    .training-note,
+    .meets-note {
       grid-column: auto;
     }
-    .training-details {
+    .training-details,
+    .meets-details {
       padding-top: 0;
     }
     .events-intro {
